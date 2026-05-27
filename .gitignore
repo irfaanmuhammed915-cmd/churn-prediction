@@ -11,7 +11,7 @@ dist/
 build/
 
 # Model artefacts (tracked via Git LFS or excluded — keep .pkl out of repo)
-model/*.pkl
+
 
 # Jupyter
 .ipynb_checkpoints/
