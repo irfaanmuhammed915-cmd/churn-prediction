@@ -1,0 +1,29 @@
+{
+  "num": [
+    "SeniorCitizen",
+    "tenure",
+    "MonthlyCharges",
+    "TotalCharges",
+    "ChargesPerMonth",
+    "NumAddOns",
+    "HasFiberAndNoSecurity",
+    "IsMonthToMonth"
+  ],
+  "cat": [
+    "gender",
+    "Partner",
+    "Dependents",
+    "PhoneService",
+    "MultipleLines",
+    "InternetService",
+    "OnlineSecurity",
+    "OnlineBackup",
+    "DeviceProtection",
+    "TechSupport",
+    "StreamingTV",
+    "StreamingMovies",
+    "Contract",
+    "PaperlessBilling",
+    "PaymentMethod"
+  ]
+}
