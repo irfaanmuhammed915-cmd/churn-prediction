@@ -189,5 +189,5 @@ SMOTE introduces synthetic samples that can distort the decision boundary. `scal
 
 ## 👤 Author
 
-**Irfaan Muhammed** — Data Analyst at Digitide, B.Tech ECE (VIT)  
+**Irfaan Muhammed** 
 [LinkedIn](https://www.linkedin.com/in/irfaan-muhammed-6002b2275/) · [GitHub](https://github.com/irfaanmuhammed915-cmd) · [Portfolio](https://irfaanmuhammed915-cmd.github.io/portfolio/irfaan_portfolio.html)
