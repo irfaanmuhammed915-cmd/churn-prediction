@@ -1,21 +1,9 @@
-"""
-Customer Churn Prediction — Training Pipeline
-=============================================
-Trains an XGBoost classifier on telecom churn data.
-Outputs: trained model, preprocessor, feature names, and performance metrics.
-
-Usage:
-    python train.py                   # uses default data path
-    python train.py --data path/to/data.csv
-"""
-
 import argparse
 import json
 import logging
 import os
 import warnings
 from pathlib import Path
-
 import joblib
 import matplotlib
 matplotlib.use("Agg")
@@ -75,7 +63,7 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 
-# ── Feature engineering ────────────────────────────────────────────────────────
+#  Feature engineering 
 def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df["ChargesPerMonth"] = (df["TotalCharges"] / df["tenure"].replace(0, 1)).round(2)
@@ -194,7 +182,7 @@ def train(data_path: Path = DATA_PATH):
 
     log.info("Model saved → %s", MODEL_DIR / "churn_model.pkl")
 
-    # ── Plots ──────────────────────────────────────────────────────────────────
+    # Plots 
     _plot_roc(y_test, y_prob, auc)
     _plot_confusion(y_test, y_pred)
     _plot_shap(pipeline, X_test, all_num, all_cat)
@@ -279,7 +267,7 @@ def _plot_shap(pipeline, X_test, num_features, cat_features):
     log.info("Saved SHAP bar → %s", ASSETS_DIR / "shap_bar.png")
 
 
-# ── CLI ────────────────────────────────────────────────────────────────────────
+#  CLI 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train churn prediction model")
     parser.add_argument("--data", default=str(DATA_PATH), help="Path to CSV")
